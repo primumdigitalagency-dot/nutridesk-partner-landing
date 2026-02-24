@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Партнёрская программа NutriDesk — для школ нутрициологии</title>
+  <meta name="description" content="Зарабатывайте вместе с NutriDesk: предлагайте выпускникам профессиональный digital-инструмент и получайте до 40% с каждой подписки." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            electric: '#7C3AED',
+            'electric-light': '#9F67FF',
+            teal: '#06B6D4',
+            lime: '#84CC16',
+            amber: '#F59E0B',
+            dark: '#0F0A1E',
+          },
+          fontFamily: { sans: ['Manrope', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============================================ -->
+<!-- NAVBAR                                        -->
+<!-- ============================================ -->
+<nav id="partner-nav" class="partner-nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">Nutri<span>Desk</span></a>
+    <div class="nav-links">
+      <a href="#platform">Платформа</a>
+      <a href="#tiers">Условия</a>
+      <a href="#calculator">Доход</a>
+      <a href="#faq">FAQ</a>
+      <a href="../landing/" style="color: rgba(255,255,255,0.4); font-size:0.8rem;">← Основной сайт</a>
+    </div>
+    <button class="btn-primary" onclick="openModal()">Стать партнёром</button>
+  </div>
+</nav>
+
+
+<!-- ============================================ -->
+<!-- 1. HERO                                       -->
+<!-- ============================================ -->
+<section class="hero-section">
+  <div class="hero-bg"></div>
+  <div class="hero-particles" id="particles"></div>
+  <div class="hero-content">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Text -->
+        <div>
+          <div class="hero-badge">
+            <span class="badge-pulse"></span>
+            Партнёрская программа
+          </div>
+          <h1 class="hero-title">
+            Дайте выпускникам<br>
+            <span class="typing-text" id="typing-target">инструмент для старта</span><span class="typing-cursor"></span><br>
+            <span class="accent">— и зарабатывайте</span>
+          </h1>
+          <p class="hero-subtitle">
+            Предлагайте своим выпускникам NutriDesk — профессиональную digital-платформу.
+            Вы получаете <strong style="color:#fff">до 40% с каждой подписки</strong>, 10 бесплатных лицензий на старте
+            и конкурентное преимущество перед другими школами.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn-primary" onclick="openModal()">Стать партнёром</button>
+            <a href="#tiers" class="btn-secondary">Смотреть условия</a>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-avatars">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" />
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="" />
+              <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="" />
+            </div>
+            <span class="trust-text"><strong>50+ нутрициологов</strong> уже используют платформу</span>
+          </div>
+        </div>
+        <!-- Phone mockup -->
+        <div class="hero-phone-wrap" id="hero-phone-wrap">
+          <div class="hero-phone-inner" id="hero-phone-inner">
+            <div class="phone-glow"></div>
+            <div class="hero-phone">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <img src="screenshots/5242295055979058154.jpg" alt="NutriDesk — кабинет нутрициолога" />
+              </div>
+            </div>
+            <div class="partner-badge-float">
+              <span class="badge-pulse"></span>
+              Партнёр NutriDesk ✓
+            </div>
+            <div class="income-badge-float">
+              <span class="amount">28 000₽</span>
+              <span class="label">в мес. пассивно</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 2. STATS TICKER                               -->
+<!-- ============================================ -->
+<div class="ticker-section">
+  <div class="ticker-track" id="ticker-track">
+    <div class="ticker-item"><span>50+ нутрициологов</span><span class="ticker-sep"></span></div>
+    <div class="ticker-item"><span>Выгода для выпускников</span><span class="ticker-sep"></span></div>
+    <div class="ticker-item"><span>Пассивный доход школе</span><span class="ticker-sep"></span></div>
+    <div class="ticker-item"><span>White-label от 50 лиц.</span><span class="ticker-sep"></span></div>
+    <div class="ticker-item"><span>10 лицензий бесплатно</span><span class="ticker-sep"></span></div>
+    <div class="ticker-item"><span>До 40% revenue share</span><span class="ticker-sep"></span></div>
+    <div class="ticker-item"><span>Партнёрство без вложений</span><span class="ticker-sep"></span></div>
+    <!-- duplicate for seamless loop -->
+    <div class="ticker-item"><span>50+ нутрициологов</span><span class="ticker-sep"></span></div>
+    <div class="ticker-item"><span>Выгода для выпускников</span><span class="ticker-sep"></span></div>
+    <div class="ticker-item"><span>Пассивный доход школе</span><span class="ticker-sep"></span></div>
+    <div class="ticker-item"><span>White-label от 50 лиц.</span><span class="ticker-sep"></span></div>
+    <div class="ticker-item"><span>10 лицензий бесплатно</span><span class="ticker-sep"></span></div>
+    <div class="ticker-item"><span>До 40% revenue share</span><span class="ticker-sep"></span></div>
+    <div class="ticker-item"><span>Партнёрство без вложений</span><span class="ticker-sep"></span></div>
+  </div>
+</div>
+
+
+<!-- ============================================ -->
+<!-- 3. PAIN POINTS                                -->
+<!-- ============================================ -->
+<section class="section-pad" style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="section-header reveal from-bottom">
+      <span class="section-tag tag-electric">Проблема рынка</span>
+      <h2 class="section-title">Выпускники получают диплом,<br>но не получают <span class="accent">инструментов</span></h2>
+      <p class="section-subtitle">Знания есть — практического цифрового инструмента нет. Это проблема для выпускника и упущенная возможность для школы.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card-p reveal from-bottom">
+        <div class="pain-icon violet">📊</div>
+        <h3 class="pain-title">Выпускники теряются в операционке</h3>
+        <p class="pain-desc">Теория усвоена, но без digital-инструмента специалист тратит часы на Excel, переписку и ручной подсчёт КБЖУ вместо работы с клиентом.</p>
+      </div>
+      <div class="pain-card-p reveal from-bottom reveal-delay-1">
+        <div class="pain-icon teal">😟</div>
+        <h3 class="pain-title">Клиенты уходят к конкурентам</h3>
+        <p class="pain-desc">Нутрициологи без удобной платформы теряют клиентов. Те идут туда, где есть красивый кабинет, напоминания и автоматика.</p>
+      </div>
+      <div class="pain-card-p reveal from-bottom reveal-delay-2">
+        <div class="pain-icon amber">🏆</div>
+        <h3 class="pain-title">Конкуренты опережают</h3>
+        <p class="pain-desc">Другие школы уже предлагают выпускникам готовые инструменты. Без этого ваши дипломы теряют ценность в глазах рынка.</p>
+      </div>
+      <div class="pain-card-p reveal from-bottom reveal-delay-3">
+        <div class="pain-icon lime">💸</div>
+        <h3 class="pain-title">Упущенный доход школы</h3>
+        <p class="pain-desc">Каждый выпускник — это потенциальный клиент подписки. Без партнёрской программы школа безвозмездно отдаёт сотни тысяч рублей пассивного дохода.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 4. О ПЛАТФОРМЕ                                -->
+<!-- ============================================ -->
+<section id="platform" class="feature-section" style="background: var(--dark);">
+  <div class="container">
+    <div class="feature-grid">
+      <div class="reveal from-left">
+        <span class="feature-tag tag-teal">О платформе</span>
+        <h2 class="feature-title" style="color:#fff;">NutriDesk — всё что нужно нутрициологу</h2>
+        <p class="feature-text on-dark-muted">
+          Личный кабинет клиента + Telegram-бот с ИИ + аналитика специалиста — в одной экосистеме. Клиент ведёт дневник в телефоне, нутрициолог видит полную картину без лишних переписок.
+        </p>
+        <ul class="feature-list">
+          <li class="on-dark-text"><span class="check-lime">✓</span>Мобильный кабинет клиента с дневником питания и прогрессом</li>
+          <li class="on-dark-text"><span class="check-lime">✓</span>Telegram-бот: ИИ считает КБЖУ по фото, голосу или тексту</li>
+          <li class="on-dark-text"><span class="check-lime">✓</span>Анонимная аналитика для нутрициолога в реальном времени</li>
+          <li class="on-dark-text"><span class="check-lime">✓</span>Белый лейбл: брендинг платформы под вашу школу</li>
+        </ul>
+        <div style="margin-top:2rem;">
+          <a href="../landing/" class="btn-secondary" target="_blank">Подробнее о платформе →</a>
+        </div>
+      </div>
+      <div class="feature-phone reveal from-right">
+        <div class="feature-phone-inner">
+          <div class="feature-phone-screen">
+            <img src="screenshots/5242295055979058152.jpg" alt="NutriDesk клиентский кабинет" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 5. ФУНКЦИОНАЛ: ЛИЧНЫЙ КАБИНЕТ                 -->
+<!-- ============================================ -->
+<section class="feature-section" style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="feature-grid">
+      <div class="feature-phone reveal from-left">
+        <div class="feature-phone-inner">
+          <div class="feature-phone-screen">
+            <img src="screenshots/01-dashboard.png" alt="Личный кабинет клиента" />
+          </div>
+        </div>
+      </div>
+      <div class="reveal from-right">
+        <span class="feature-tag tag-electric">Кабинет клиента</span>
+        <h2 class="feature-title">Личный кабинет в смартфоне — красиво и удобно</h2>
+        <p class="feature-text">Клиент открывает телефон и видит всю свою работу: калории, макронутриенты, вес, самочувствие и активность. Никаких таблиц и переписки.</p>
+        <ul class="feature-list">
+          <li><span class="check-lime">✓</span>Дашборд с КБЖУ и прогрессом за день</li>
+          <li><span class="check-lime">✓</span>История питания и недельная аналитика</li>
+          <li><span class="check-lime">✓</span>График веса и замеров тела</li>
+          <li><span class="check-lime">✓</span>Цветовые индикаторы нормы/перебора</li>
+          <li><span class="check-lime">✓</span>Чат с нутрициологом внутри кабинета</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 6. ФУНКЦИОНАЛ: TELEGRAM-БОТ С ИИ              -->
+<!-- ============================================ -->
+<section class="feature-section" style="background: var(--dark);">
+  <div class="container">
+    <div class="feature-grid" style="direction: rtl;">
+      <div class="feature-phone reveal from-right" style="direction: ltr;">
+        <div class="feature-phone-inner">
+          <div class="feature-phone-screen">
+            <img src="screenshots/5242295055979058148.jpg" alt="Telegram-бот NutriDesk" />
+          </div>
+        </div>
+      </div>
+      <div class="reveal from-left" style="direction: ltr;">
+        <span class="feature-tag tag-teal">Telegram-бот</span>
+        <h2 class="feature-title" style="color:#fff;">ИИ считает КБЖУ — <span style="color:var(--teal)">3 секунды</span> на запись</h2>
+        <p class="feature-text on-dark-muted">Клиент не открывает приложение — он просто пишет боту в Telegram. ИИ распознаёт еду по фото, голосу или тексту и автоматически вносит данные.</p>
+        <ul class="feature-list">
+          <li class="on-dark-text"><span class="check-lime">✓</span>Фото блюда → ИИ определяет состав и граммовку</li>
+          <li class="on-dark-text"><span class="check-lime">✓</span>Голосовое сообщение → мгновенное распознавание</li>
+          <li class="on-dark-text"><span class="check-lime">✓</span>Текст / штрих-код → поиск в базе 2 млн+ продуктов</li>
+          <li class="on-dark-text"><span class="check-lime">✓</span>Напоминания и мотивационные сообщения</li>
+          <li class="on-dark-text"><span class="check-lime">✓</span>Синхронизация с кабинетом нутрициолога в реальном времени</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 7. ФУНКЦИОНАЛ: ДНЕВНИК ПИТАНИЯ                -->
+<!-- ============================================ -->
+<section class="feature-section" style="background: #fff;">
+  <div class="container">
+    <div class="feature-grid">
+      <div class="feature-phone reveal from-left">
+        <div class="feature-phone-inner">
+          <div class="feature-phone-screen">
+            <img src="screenshots/03-food-diary.png" alt="Дневник питания" />
+          </div>
+        </div>
+      </div>
+      <div class="reveal from-right">
+        <span class="feature-tag tag-lime">Дневник питания</span>
+        <h2 class="feature-title">Подробный дневник питания с фото</h2>
+        <p class="feature-text">Каждый приём пищи с фото, комментарием и полным составом КБЖУ. Нутрициолог видит не просто цифры, а реальный рацион клиента.</p>
+        <ul class="feature-list">
+          <li><span class="check-lime">✓</span>Разбивка по завтраку, обеду, ужину и перекусам</li>
+          <li><span class="check-lime">✓</span>Детальная БЖУ по каждому продукту</li>
+          <li><span class="check-lime">✓</span>Кольцевые диаграммы выполнения нормы</li>
+          <li><span class="check-lime">✓</span>История питания за любой период</li>
+          <li><span class="check-lime">✓</span>Экспорт отчётов для консультации</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 8. ФУНКЦИОНАЛ: ЗАМЕРЫ И ПРОГРЕСС              -->
+<!-- ============================================ -->
+<section class="feature-section" style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="feature-grid" style="direction: rtl;">
+      <div class="feature-phone reveal from-right" style="direction: ltr;">
+        <div class="feature-phone-inner">
+          <div class="feature-phone-screen">
+            <img src="screenshots/09-measurements.png" alt="Замеры и прогресс" />
+          </div>
+        </div>
+      </div>
+      <div class="reveal from-left" style="direction: ltr;">
+        <span class="feature-tag tag-electric">Замеры и прогресс</span>
+        <h2 class="feature-title">Замеры тела и динамика — в одном экране</h2>
+        <p class="feature-text">Клиент вносит замеры тела, вес и фото-фиксацию. Нутрициолог видит прогресс графически — без Excel и WhatsApp.</p>
+        <ul class="feature-list">
+          <li><span class="check-lime">✓</span>14+ параметров замеров тела</li>
+          <li><span class="check-lime">✓</span>Интерактивный график динамики веса</li>
+          <li><span class="check-lime">✓</span>Фото-прогресс с таймлайном</li>
+          <li><span class="check-lime">✓</span>Визуализация достижений за период</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 9. ФУНКЦИОНАЛ: БИБЛИОТЕКА И ПЛАНЫ             -->
+<!-- ============================================ -->
+<section class="feature-section" style="background: #fff;">
+  <div class="container">
+    <div class="feature-grid">
+      <div class="feature-phone reveal from-left">
+        <div class="feature-phone-inner">
+          <div class="feature-phone-screen">
+            <img src="screenshots/13-library.png" alt="Библиотека материалов" />
+          </div>
+        </div>
+      </div>
+      <div class="reveal from-right">
+        <span class="feature-tag tag-amber">Библиотека</span>
+        <h2 class="feature-title">Библиотека, рецепты и персональные планы</h2>
+        <p class="feature-text">Нутрициолог создаёт библиотеку рецептов, статей, рекомендаций по БАДам — и раздаёт клиентам прямо в платформе без пересылки файлов.</p>
+        <ul class="feature-list">
+          <li><span class="check-lime">✓</span>База рецептов с КБЖУ и фото</li>
+          <li><span class="check-lime">✓</span>Персональные планы питания по клиенту</li>
+          <li><span class="check-lime">✓</span>Рекомендации по добавкам и БАДам</li>
+          <li><span class="check-lime">✓</span>Статьи и материалы от специалиста</li>
+          <li><span class="check-lime">✓</span>Шаблоны планов для быстрого создания</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 10. ФУНКЦИОНАЛ: ГЕЙМИФИКАЦИЯ                  -->
+<!-- ============================================ -->
+<section class="feature-section" style="background: var(--dark);">
+  <div class="container">
+    <div class="feature-grid" style="direction: rtl;">
+      <div class="feature-phone reveal from-right" style="direction: ltr;">
+        <div class="feature-phone-inner">
+          <div class="feature-phone-screen">
+            <img src="screenshots/11-progress.png" alt="Геймификация и прогресс" />
+          </div>
+        </div>
+      </div>
+      <div class="reveal from-left" style="direction: ltr;">
+        <span class="feature-tag tag-lime">Геймификация</span>
+        <h2 class="feature-title" style="color:#fff;">Стрики и достижения — клиенты <span style="color:var(--lime)">не бросают</span></h2>
+        <p class="feature-text on-dark-muted">Игровые механики удерживают клиентов. Стрики, достижения и прогресс-кольца делают ведение дневника привычкой, а не обязанностью.</p>
+        <ul class="feature-list">
+          <li class="on-dark-text"><span class="check-lime">✓</span>Серии ведения дневника (стрики)</li>
+          <li class="on-dark-text"><span class="check-lime">✓</span>Бейджи за достижения и цели</li>
+          <li class="on-dark-text"><span class="check-lime">✓</span>Анимированные прогресс-кольца</li>
+          <li class="on-dark-text"><span class="check-lime">✓</span>Уровни активности клиента</li>
+          <li class="on-dark-text"><span class="check-lime">✓</span>Мотивационные пуши и поощрения</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 11. ФУНКЦИОНАЛ: ADMIN-ПАНЕЛЬ                  -->
+<!-- ============================================ -->
+<section class="feature-section" style="background: #fff;">
+  <div class="container">
+    <div class="feature-grid">
+      <div class="reveal from-left">
+        <span class="feature-tag tag-electric">Admin-панель</span>
+        <h2 class="feature-title">Панель нутрициолога — все клиенты под контролем</h2>
+        <p class="feature-text">Нутрициолог видит всех клиентов в одном кабинете. Дневники, замеры, анализы, переписка — без переключения между мессенджерами и таблицами.</p>
+        <ul class="feature-list">
+          <li><span class="check-lime">✓</span>Список клиентов с последней активностью</li>
+          <li><span class="check-lime">✓</span>Подробный профиль и история каждого клиента</li>
+          <li><span class="check-lime">✓</span>Встроенный чат и комментарии к дневнику</li>
+          <li><span class="check-lime">✓</span>Аналитика соблюдения рациона</li>
+          <li><span class="check-lime">✓</span>Календарь консультаций и напоминания</li>
+          <li><span class="check-lime">✓</span>Управление тарифами и доступом клиентов</li>
+        </ul>
+      </div>
+      <div class="feature-phone reveal from-right">
+        <div class="feature-phone-inner">
+          <div class="feature-phone-screen">
+            <img src="screenshots/17-mobile-dashboard.png" alt="Admin-панель нутрициолога" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 12. WHITE-LABEL ПРЕВЬЮ                        -->
+<!-- ============================================ -->
+<section class="feature-section" style="background: var(--dark);">
+  <div class="container-sm">
+    <div class="section-header reveal from-bottom">
+      <span class="section-tag tag-dark">White-label</span>
+      <h2 class="section-title title-dark">Платформа под <span class="accent">брендом вашей школы</span></h2>
+      <p class="section-subtitle on-dark">Уровень «Бренд-партнёр» от 50 лицензий: платформа выглядит как собственный продукт вашей школы.</p>
+    </div>
+    <div class="wl-preview reveal from-bottom">
+      <div class="wl-card">
+        <div class="wl-label">Стандартный NutriDesk</div>
+        <div class="wl-phone-wrap">
+          <div class="wl-phone-screen">
+            <img src="screenshots/5242295055979058157.jpg" alt="NutriDesk стандарт" />
+          </div>
+        </div>
+        <div class="wl-brand-overlay" style="color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.06);">
+          NutriDesk
+        </div>
+      </div>
+      <div class="wl-arrow-wrap">
+        <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
+          <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="wl-card branded">
+        <div class="wl-label" style="color: var(--electric-light);">Ваш бренд</div>
+        <div class="wl-phone-wrap">
+          <div class="wl-phone-screen">
+            <img src="screenshots/5242295055979058157.jpg" alt="Брендированная версия" />
+          </div>
+        </div>
+        <div class="wl-brand-overlay" style="color: var(--electric-light); background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3);">
+          Академия Здоровья ✓
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2.5rem; color: rgba(255,255,255,0.4); font-size:0.85rem; line-height:1.7;">
+      Логотип, цвета, домен вида <strong style="color:rgba(255,255,255,0.7)">pro.вашашкола.ru</strong> — мы адаптируем платформу и помогаем с внедрением
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 13. ВЫГОДЫ ПАРТНЁРСТВА                        -->
+<!-- ============================================ -->
+<section class="section-pad" style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="section-header reveal from-bottom">
+      <span class="section-tag tag-electric">Почему выгодно</span>
+      <h2 class="section-title">6 причин стать <span class="accent">партнёром NutriDesk</span></h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card reveal from-bottom">
+        <div class="benefit-icon bi-violet">💰</div>
+        <h3 class="benefit-title">Пассивный доход</h3>
+        <p class="benefit-desc">40% с каждой подписки выпускника в первый год, затем 20% бессрочно. Один поток выпускников — годы регулярного дохода.</p>
+      </div>
+      <div class="benefit-card reveal from-bottom reveal-delay-1">
+        <div class="benefit-icon bi-teal">🎓</div>
+        <h3 class="benefit-title">Ценность диплома растёт</h3>
+        <p class="benefit-desc">Ваши выпускники приходят к первому клиенту уже с профессиональным инструментом. Это их конкурентное преимущество — и ваша репутация.</p>
+      </div>
+      <div class="benefit-card reveal from-bottom reveal-delay-2">
+        <div class="benefit-icon bi-lime">🏅</div>
+        <h3 class="benefit-title">Конкурентное преимущество</h3>
+        <p class="benefit-desc">Ни одна другая школа пока не предлагает выпускникам такой экосистемы. Станьте первыми — пока конкуренты только думают.</p>
+      </div>
+      <div class="benefit-card reveal from-bottom reveal-delay-3">
+        <div class="benefit-icon bi-amber">📱</div>
+        <h3 class="benefit-title">Практика на реальном инструменте</h3>
+        <p class="benefit-desc">Студенты работают с платформой во время обучения бесплатно. К выпуску они уже умеют ей пользоваться — онбординг не нужен.</p>
+      </div>
+      <div class="benefit-card reveal from-bottom reveal-delay-4">
+        <div class="benefit-icon bi-pink">🎨</div>
+        <h3 class="benefit-title">Брендинг платформы</h3>
+        <p class="benefit-desc">Дилер: логотип школы в платформе. Бренд-партнёр: полный white-label с вашим доменом, цветами и названием.</p>
+      </div>
+      <div class="benefit-card reveal from-bottom reveal-delay-5">
+        <div class="benefit-icon bi-indigo">📣</div>
+        <h3 class="benefit-title">Маркетинговый актив</h3>
+        <p class="benefit-desc">«Официальный партнёр NutriDesk» на сайте школы, в материалах и рекламе. Используйте это в продвижении своих курсов.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 14. 3 УРОВНЯ ПАРТНЁРСТВА                      -->
+<!-- ============================================ -->
+<section id="tiers" class="section-pad" style="background: var(--dark);">
+  <div class="container">
+    <div class="section-header reveal from-bottom">
+      <span class="section-tag tag-teal">Условия партнёрства</span>
+      <h2 class="section-title title-dark">Выберите формат,<br><span class="accent-teal">удобный вашей школе</span></h2>
+      <p class="section-subtitle on-dark">Три уровня — от нулевых инвестиций до полного white-label. Каждый следующий даёт больше контроля, брендинга и дохода.</p>
+    </div>
+    <div class="tiers-grid reveal from-bottom">
+
+      <!-- Реферальный -->
+      <div class="tier-card">
+        <span class="tier-badge tb-ref">Старт без вложений</span>
+        <h3 class="tier-name">Реферальный партнёр</h3>
+        <p class="tier-tagline">Рекомендуете — получаете процент. Никаких обязательств и инвестиций.</p>
+        <div class="tier-free-badge">
+          🎁 10 бесплатных лицензий на старте
+        </div>
+        <div class="tier-divider"></div>
+        <div class="tier-price">
+          <span class="amount">40%</span><span class="unit">/ 12 мес.</span>
+          <span class="note">затем 20% бессрочно · 1 400₽/мес с выпускника</span>
+        </div>
+        <ul class="tier-features">
+          <li><span class="tier-check">✓</span>Уникальная реферальная ссылка + промокод</li>
+          <li><span class="tier-check">✓</span>10 демо-лицензий для показа студентам</li>
+          <li><span class="tier-check">✓</span>Выплаты каждый месяц</li>
+          <li><span class="tier-check">✓</span>Статус «Официальный партнёр NutriDesk»</li>
+          <li><span class="tier-check">✓</span>Маркетинговые материалы для школы</li>
+        </ul>
+        <button class="btn-primary" style="width:100%;" onclick="openModal()">Начать бесплатно</button>
+      </div>
+
+      <!-- Дилер (популярный) -->
+      <div class="tier-card popular">
+        <span class="tier-badge tb-deal">⭐ Популярный выбор</span>
+        <h3 class="tier-name">Дилер</h3>
+        <p class="tier-tagline">Покупаете лицензии по оптовой цене, включаете в курс или продаёте отдельно.</p>
+        <div class="tier-free-badge">
+          🎁 Первый месяц 10 лицензий бесплатно
+        </div>
+        <div class="tier-divider"></div>
+        <div class="tier-price">
+          <span class="amount">1 750₽</span><span class="unit">/ лицензия/мес</span>
+          <span class="note">от 10 лиц. · розница 3 500₽ · маржа до 100%</span>
+        </div>
+        <ul class="tier-features">
+          <li><span class="tier-check">✓</span>Оптовая цена 50% от розницы</li>
+          <li><span class="tier-check">✓</span>Перепродажа по любой цене</li>
+          <li><span class="tier-check">✓</span>Включение в стоимость курса</li>
+          <li><span class="tier-check">✓</span>Логотип школы в платформе</li>
+          <li><span class="tier-check">✓</span>Приоритетная поддержка</li>
+          <li><span class="tier-check">✓</span>Брендированные промо-материалы</li>
+        </ul>
+        <button class="btn-primary" style="width:100%;" onclick="openModal()">Обсудить условия</button>
+      </div>
+
+      <!-- Бренд-партнёр -->
+      <div class="tier-card">
+        <span class="tier-badge tb-brand">💎 White-label</span>
+        <h3 class="tier-name">Бренд-партнёр</h3>
+        <p class="tier-tagline">Платформа под вашим брендом. Полный контроль над продуктом и максимальный доход.</p>
+        <div class="tier-free-badge">
+          🎁 10 staff-лицензий навсегда бесплатно
+        </div>
+        <div class="tier-divider"></div>
+        <div class="tier-price">
+          <span class="amount">от 50 лиц.</span>
+          <span class="note">Wholesale 50% ИЛИ Revenue Share 40% бессрочно</span>
+        </div>
+        <ul class="tier-features">
+          <li><span class="tier-check">✓</span>Полный white-label: логотип, цвета, домен</li>
+          <li><span class="tier-check">✓</span>Адаптация дизайна под брендбук школы</li>
+          <li><span class="tier-check">✓</span>Помощь с внедрением и онбордингом</li>
+          <li><span class="tier-check">✓</span>Совместный маркетинг</li>
+          <li><span class="tier-check">✓</span>Dedicated менеджер партнёра</li>
+          <li><span class="tier-check">✓</span>Индивидуальный договор</li>
+        </ul>
+        <button class="btn-primary" style="width:100%;" onclick="openModal()">Узнать подробнее</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 15. КАЛЬКУЛЯТОР ДОХОДА                        -->
+<!-- ============================================ -->
+<section id="calculator" class="section-pad" style="background: var(--dark); padding-top: 0;">
+  <div class="container-sm">
+    <div class="section-header reveal from-bottom">
+      <span class="section-tag tag-amber">Потенциальный доход</span>
+      <h2 class="section-title title-dark">Сколько заработает <span class="accent-teal">ваша школа?</span></h2>
+      <p class="section-subtitle on-dark">Подвигайте слайдер — посмотрите расчёт для вашего масштаба.</p>
+    </div>
+    <div class="calc-card reveal from-bottom">
+      <div class="calc-slider-wrap">
+        <div class="calc-label">
+          <span class="label-text">Выпускников в год</span>
+          <span class="calc-val" id="grad-count">30</span>
+        </div>
+        <input type="range" min="5" max="200" value="30" id="grad-slider" oninput="updateCalc(this.value)" />
+      </div>
+      <div class="calc-results">
+        <div class="calc-result-card">
+          <div class="calc-result-title">Реферальный</div>
+          <div class="calc-result-income" id="ref-income">21 000₽</div>
+          <div class="calc-result-annual" id="ref-annual">252 000₽/год</div>
+          <div style="color: rgba(255,255,255,0.25); font-size:0.7rem; margin-top:0.5rem;">40% · 1 400₽/мес с лиц.</div>
+        </div>
+        <div class="calc-result-card" style="border-color: var(--electric);">
+          <div class="calc-result-title">Дилер (маржа)</div>
+          <div class="calc-result-income" id="deal-income">26 250₽</div>
+          <div class="calc-result-annual" id="deal-annual">315 000₽/год</div>
+          <div style="color: rgba(255,255,255,0.25); font-size:0.7rem; margin-top:0.5rem;">Купил 1 750₽ → продал 3 500₽</div>
+        </div>
+        <div class="calc-result-card">
+          <div class="calc-result-title">Бренд (40% бессрочно)</div>
+          <div class="calc-result-income" id="brand-income">21 000₽</div>
+          <div class="calc-result-annual" id="brand-annual">252 000₽/год (навсегда)</div>
+          <div style="color: rgba(255,255,255,0.25); font-size:0.7rem; margin-top:0.5rem;">40% · доход растёт каждый год</div>
+        </div>
+      </div>
+      <p class="calc-note">* Расчёт при условии, что 50% выпускников оформляют подписку по тарифу 3 500₽/мес. Реальный доход зависит от конверсии.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 16. КАК ЭТО РАБОТАЕТ                          -->
+<!-- ============================================ -->
+<section class="section-pad" style="background: #fff;">
+  <div class="container">
+    <div class="section-header reveal from-bottom">
+      <span class="section-tag tag-electric">Как начать</span>
+      <h2 class="section-title">4 шага до <span class="accent">первого дохода</span></h2>
+    </div>
+    <div class="steps-grid reveal from-bottom">
+      <div class="steps-connector"></div>
+      <div class="step-card">
+        <div class="step-num"><span class="step-icon">✉️</span></div>
+        <h4 class="step-title">Оставьте заявку</h4>
+        <p class="step-desc">Заполните форму — расскажите о школе и выберите интересующий уровень партнёрства.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num"><span class="step-icon">🤝</span></div>
+        <h4 class="step-title">Обсудим условия</h4>
+        <p class="step-desc">Созвонимся, обсудим детали под ваш формат — от реферального до white-label.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num"><span class="step-icon">🚀</span></div>
+        <h4 class="step-title">Получите доступ</h4>
+        <p class="step-desc">Подписываем договор — вы получаете 10 бесплатных лицензий, ссылки и материалы.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num"><span class="step-icon">💰</span></div>
+        <h4 class="step-title">Зарабатывайте</h4>
+        <p class="step-desc">Выпускники подключаются — вы получаете выплаты каждый месяц. Автоматически.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 17. FAQ                                       -->
+<!-- ============================================ -->
+<section id="faq" class="section-pad" style="background: var(--bg-soft);">
+  <div class="container-sm">
+    <div class="section-header reveal from-bottom">
+      <span class="section-tag tag-electric">Вопросы и ответы</span>
+      <h2 class="section-title">Часто задаваемые <span class="accent">вопросы</span></h2>
+    </div>
+    <div class="faq-list reveal from-bottom">
+
+      <div class="faq-item-p">
+        <div class="faq-q-p" onclick="toggleFaq(this)">
+          Нужно ли платить за участие в партнёрской программе?
+          <span class="faq-chevron-p">▼</span>
+        </div>
+        <div class="faq-a-p">
+          Нет. Уровень «Реферальный» полностью бесплатен — вы просто передаёте выпускникам ссылку или промокод и получаете процент с их подписок. «Дилер» предполагает оптовую закупку лицензий, но первый месяц — 10 лицензий бесплатно.
+        </div>
+      </div>
+
+      <div class="faq-item-p">
+        <div class="faq-q-p" onclick="toggleFaq(this)">
+          Как отслеживаются рефералы и начисляется доход?
+          <span class="faq-chevron-p">▼</span>
+        </div>
+        <div class="faq-a-p">
+          Каждый партнёр получает уникальную реферальную ссылку и промокод. В личном кабинете партнёра видны все переходы, регистрации и оплаты. Выплаты происходят ежемесячно — на карту или расчётный счёт.
+        </div>
+      </div>
+
+      <div class="faq-item-p">
+        <div class="faq-q-p" onclick="toggleFaq(this)">
+          Можно ли включить платформу в стоимость курса?
+          <span class="faq-chevron-p">▼</span>
+        </div>
+        <div class="faq-a-p">
+          Да, это один из самых популярных форматов. Вы покупаете пакет лицензий по оптовой цене (уровень «Дилер») и включаете подписку NutriDesk в стоимость обучения. Выпускник получает готовый инструмент сразу после диплома.
+        </div>
+      </div>
+
+      <div class="faq-item-p">
+        <div class="faq-q-p" onclick="toggleFaq(this)">
+          Как долго идут выплаты по реферальной программе?
+          <span class="faq-chevron-p">▼</span>
+        </div>
+        <div class="faq-a-p">
+          Первые 12 месяцев — 40% с каждой оплаты выпускника (1 400₽/мес с одной лицензии). После первого года — 20% бессрочно, пока выпускник пользуется платформой. Чем больше выпускников и чем дольше они остаются, тем выше ваш пассивный доход.
+        </div>
+      </div>
+
+      <div class="faq-item-p">
+        <div class="faq-q-p" onclick="toggleFaq(this)">
+          Студенты могут использовать платформу во время обучения?
+          <span class="faq-chevron-p">▼</span>
+        </div>
+        <div class="faq-a-p">
+          Да, именно для этого предусмотрены бесплатные лицензии. Мы рекомендуем давать студентам доступ на период практики — они привыкают к инструменту и после выпуска охотнее оформляют подписку. Это значительно повышает конверсию.
+        </div>
+      </div>
+
+      <div class="faq-item-p">
+        <div class="faq-q-p" onclick="toggleFaq(this)">
+          Что входит в white-label для Бренд-партнёра?
+          <span class="faq-chevron-p">▼</span>
+        </div>
+        <div class="faq-a-p">
+          Полная адаптация: логотип и название вашей школы, фирменные цвета, ваш домен (pro.вашашкола.ru). Мы сопровождаем внедрение — обучаем сотрудников школы, помогаем с онбордингом выпускников и предоставляем маркетинговые материалы под ваш бренд.
+        </div>
+      </div>
+
+      <div class="faq-item-p">
+        <div class="faq-q-p" onclick="toggleFaq(this)">
+          Можно ли сменить уровень партнёрства?
+          <span class="faq-chevron-p">▼</span>
+        </div>
+        <div class="faq-a-p">
+          Да. Многие партнёры начинают с реферального уровня, набирают базу и переходят на дилерский или бренд-уровень. Переход происходит по согласованию, все ранее привлечённые клиенты остаются за вами.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 18. ФИНАЛЬНЫЙ CTA                             -->
+<!-- ============================================ -->
+<section class="cta-section">
+  <div class="cta-bg"></div>
+  <div class="cta-content reveal from-bottom">
+    <h2 class="cta-title">Ваши выпускники заслуживают лучшего старта</h2>
+    <p class="cta-subtitle">
+      Дайте им профессиональный инструмент — и зарабатывайте на каждом из них месяцами. Первые 10 лицензий бесплатно, никаких обязательств.
+    </p>
+    <div class="cta-buttons">
+      <button class="btn-primary-large" onclick="openModal()">Стать партнёром</button>
+      <a href="https://t.me/Chistyakov_mikhail" target="_blank" class="btn-secondary" style="padding: 0.9rem 2rem; font-size:0.95rem;">Написать в Telegram</a>
+    </div>
+    <div class="cta-trust">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="rgba(245,158,11,0.6)"/></svg>
+      Уже 50+ нутрициологов работают на платформе · Партнёрская программа запускается прямо сейчас
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- FOOTER                                        -->
+<!-- ============================================ -->
+<footer class="partner-footer">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Nutri<span>Desk</span></div>
+        <p class="footer-desc">Партнёрская программа для школ нутрициологии. Дайте выпускникам профессиональный инструмент и зарабатывайте вместе с нами.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">Программа</h4>
+        <ul class="footer-links">
+          <li><a href="#platform">О платформе</a></li>
+          <li><a href="#tiers">Условия партнёрства</a></li>
+          <li><a href="#calculator">Калькулятор дохода</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="../landing/">Основной сайт →</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Контакты</h4>
+        <ul class="footer-links">
+          <li><a href="https://t.me/Chistyakov_mikhail" target="_blank">Telegram: @Chistyakov_mikhail</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 NutriDesk. Все права защищены.</p>
+      <div style="display:flex; gap:1.5rem;">
+        <a href="../landing/privacy.html" class="footer-links" style="color: rgba(255,255,255,0.35); text-decoration:none; font-size:0.75rem; transition: color 0.2s;">Политика конфиденциальности</a>
+        <a href="../landing/oferta.html" class="footer-links" style="color: rgba(255,255,255,0.35); text-decoration:none; font-size:0.75rem; transition: color 0.2s;">Оферта</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============================================ -->
+<!-- MODAL                                         -->
+<!-- ============================================ -->
+<div id="partner-modal" class="modal-overlay-p" onclick="if(event.target===this)closeModal()">
+  <div class="modal-card-p">
+    <button class="modal-close-p" onclick="closeModal()">×</button>
+    <h3 style="font-size:1.5rem; font-weight:800; color:var(--text); margin-bottom:0.4rem; font-family:'Manrope',sans-serif;">Стать партнёром</h3>
+    <p style="color: var(--text-muted); font-size:0.875rem; margin-bottom:1.75rem;">Оставьте заявку — свяжемся в течение дня и обсудим условия</p>
+
+    <form id="partner-form" onsubmit="submitPartnerForm(event)">
+      <div style="margin-bottom:1rem;">
+        <label style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.4rem; color:var(--text);">Ваше имя</label>
+        <input type="text" name="name" required placeholder="Как вас зовут?" class="modal-input-p" />
+      </div>
+      <div style="margin-bottom:1rem;">
+        <label style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.4rem; color:var(--text);">Телефон</label>
+        <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" class="modal-input-p" />
+      </div>
+      <div style="margin-bottom:1rem;">
+        <label style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.4rem; color:var(--text);">Email</label>
+        <input type="email" name="email" required placeholder="example@email.com" class="modal-input-p" />
+      </div>
+      <div style="margin-bottom:1rem;">
+        <label style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.4rem; color:var(--text);">Название школы</label>
+        <input type="text" name="school_name" required placeholder="Название вашей школы / организации" class="modal-input-p" />
+      </div>
+      <div style="margin-bottom:1rem;">
+        <label style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.4rem; color:var(--text);">Выпускников в год</label>
+        <select name="graduates_count" class="modal-input-p">
+          <option value="">Выберите</option>
+          <option value="до 30">До 30 выпускников</option>
+          <option value="30-100">30–100 выпускников</option>
+          <option value="100+">100+ выпускников</option>
+        </select>
+      </div>
+      <div style="margin-bottom:1.5rem;">
+        <label style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.75rem; color:var(--text);">Интересующий уровень</label>
+        <div class="modal-radio-wrap">
+          <label><input type="radio" name="tier" value="referral" checked hidden /><span class="radio-label-p">Реферальный</span></label>
+          <label><input type="radio" name="tier" value="dealer" hidden /><span class="radio-label-p">Дилер</span></label>
+          <label><input type="radio" name="tier" value="brand" hidden /><span class="radio-label-p">Бренд-партнёр</span></label>
+        </div>
+      </div>
+      <button type="submit" class="btn-submit-p">Отправить заявку</button>
+    </form>
+    <div id="partner-success" style="display:none; text-align:center; padding:2.5rem 0;">
+      <div style="font-size:3.5rem; margin-bottom:0.75rem;">✅</div>
+      <h4 style="font-family:'Manrope',sans-serif; font-size:1.25rem; font-weight:800; color:var(--text); margin-bottom:0.5rem;">Заявка отправлена!</h4>
+      <p style="color:var(--text-muted); font-size:0.875rem;">Мы свяжемся с вами в течение дня и расскажем о деталях</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================ -->
+<!-- SCRIPTS                                       -->
+<!-- ============================================ -->
+<script>
+// ── Particles ────────────────────────────────────
+(function() {
+  const container = document.getElementById('particles');
+  const colors = ['#7C3AED','#06B6D4','#84CC16','#F59E0B'];
+  for (let i = 0; i < 18; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = Math.random() * 6 + 3;
+    p.style.cssText = `
+      width: ${size}px; height: ${size}px;
+      left: ${Math.random() * 100}%; top: ${Math.random() * 100}%;
+      background: ${colors[Math.floor(Math.random() * colors.length)]};
+      animation-duration: ${Math.random() * 8 + 5}s;
+      animation-delay: ${Math.random() * -8}s;
+    `;
+    container.appendChild(p);
+  }
+})();
+
+// ── Typing effect ─────────────────────────────────
+(function() {
+  const phrases = [
+    'инструмент для старта',
+    'конкурентное преимущество',
+    'цифровой кабинет',
+    'пассивный доход школе',
+  ];
+  const el = document.getElementById('typing-target');
+  let phraseIdx = 0, charIdx = 0, deleting = false;
+
+  function tick() {
+    const current = phrases[phraseIdx];
+    if (!deleting) {
+      el.textContent = current.slice(0, ++charIdx);
+      if (charIdx === current.length) { deleting = true; setTimeout(tick, 2000); return; }
+    } else {
+      el.textContent = current.slice(0, --charIdx);
+      if (charIdx === 0) { deleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; }
+    }
+    setTimeout(tick, deleting ? 50 : 90);
+  }
+  setTimeout(tick, 800);
+})();
+
+// ── Parallax phone ────────────────────────────────
+(function() {
+  const wrap = document.getElementById('hero-phone-inner');
+  if (!wrap) return;
+  document.addEventListener('mousemove', (e) => {
+    const cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+    const dx = (e.clientX - cx) / cx, dy = (e.clientY - cy) / cy;
+    wrap.style.transform = `translate(${dx * 12}px, ${dy * 8}px)`;
+  });
+})();
+
+// ── Scroll reveal ─────────────────────────────────
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ── Navbar scroll ─────────────────────────────────
+const nav = document.getElementById('partner-nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ── Smooth scroll ─────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+// ── FAQ accordion ─────────────────────────────────
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item-p');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item-p.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// ── Counter animation ─────────────────────────────
+function animateCounter(el, target, suffix) {
+  let current = 0;
+  const step = Math.ceil(target / 50);
+  const timer = setInterval(() => {
+    current = Math.min(current + step, target);
+    el.textContent = current + suffix;
+    if (current >= target) clearInterval(timer);
+  }, 30);
+}
+
+// ── Income calculator ─────────────────────────────
+function updateCalc(graduates) {
+  const g = parseInt(graduates);
+  const active = Math.round(g * 0.5); // 50% conversion assumption
+  document.getElementById('grad-count').textContent = g;
+
+  const refMonthly = active * 1400;
+  const refAnnual = refMonthly * 12;
+  document.getElementById('ref-income').textContent = refMonthly.toLocaleString('ru') + '₽/мес';
+  document.getElementById('ref-annual').textContent = refAnnual.toLocaleString('ru') + '₽/год';
+
+  const dealMonthly = active * (3500 - 1750);
+  const dealAnnual = dealMonthly * 12;
+  document.getElementById('deal-income').textContent = dealMonthly.toLocaleString('ru') + '₽/мес';
+  document.getElementById('deal-annual').textContent = dealAnnual.toLocaleString('ru') + '₽/год';
+
+  const brandMonthly = active * 1400;
+  const brandAnnual = brandMonthly * 12;
+  document.getElementById('brand-income').textContent = brandMonthly.toLocaleString('ru') + '₽/мес';
+  document.getElementById('brand-annual').textContent = brandAnnual.toLocaleString('ru') + '₽/год (навсегда)';
+}
+
+// ── Modal ─────────────────────────────────────────
+function openModal() {
+  document.getElementById('partner-modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('partner-modal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+function submitPartnerForm(e) {
+  e.preventDefault();
+  document.getElementById('partner-form').style.display = 'none';
+  document.getElementById('partner-success').style.display = 'block';
+  setTimeout(closeModal, 2500);
+  setTimeout(() => {
+    document.getElementById('partner-form').style.display = 'block';
+    document.getElementById('partner-success').style.display = 'none';
+    document.getElementById('partner-form').reset();
+  }, 3000);
+}
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+</script>
+
+</body>
+</html>
